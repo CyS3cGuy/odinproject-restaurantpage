@@ -1,0 +1,39 @@
+#home { 
+    height: 100%;  
+    padding: 1rem; 
+    background-image: url("./pizza-hero.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+
+    color: white; 
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+
+    .open-hours {
+        position: absolute; 
+        bottom: 0;
+        left: 1rem; 
+        background-color: black;
+        padding: 1rem; 
+        border-radius: 1rem; 
+    }
+    button {
+        background-color: black;
+        font-size: var(--big-font); 
+        color: white; 
+        padding: 1rem;
+        border-radius: 1rem;
+        border: none;  
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: gray; 
+        transition: 300ms; 
+    }
+}
