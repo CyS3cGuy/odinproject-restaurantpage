@@ -4,10 +4,12 @@
 // Keyval accepts attribute-value pair
 function addChild(childHTMLTag, parent, text, classArr = null, keyval = null) {
     const child = document.createElement(childHTMLTag);
-    child.textContent = text;
+    if (text) child.textContent = text;
 
     if (classArr) {
-        classArr.forEach(eachClass => child.classList.add(eachClass)); 
+        classArr.forEach(eachClass => {
+            if (eachClass) child.classList.add(eachClass);
+        }); 
     }
 
     if (keyval) {
@@ -16,7 +18,9 @@ function addChild(childHTMLTag, parent, text, classArr = null, keyval = null) {
         }
     }
 
-    parent.appendChild(child); 
+    parent.appendChild(child);
+    
+    return child; 
 }
 
 export {addChild}; 
